@@ -57,7 +57,7 @@ const consumer = kafka.consumer({ groupId: 'fraud-detection-group' });
   await consumer.subscribe({ topic: 'transactions', fromBeginning: false });
   
   console.log('✅ Kafka Connected - Advanced Fraud Detection System');
-  console.log('📡 User: sukshamrainaa | 2025-11-04 21:02:08 UTC');
+  console.log('📡 User: parvgupta | 2025-11-04 21:02:08 UTC');
 
   consumer.run({
     eachMessage: async ({ message }) => {
@@ -280,7 +280,7 @@ app.delete('/api/cleanup/all', async (req, res) => {
     }
     
     const timestamp = new Date().toISOString();
-    console.log(`🗑️  Database cleanup requested by sukshamrainaa at ${timestamp}`);
+    console.log(`🗑️  Database cleanup requested by parvgupta at ${timestamp}`);
     console.log(`🔐 Password verified successfully`);
     
     // Drop all collections
@@ -298,7 +298,7 @@ app.delete('/api/cleanup/all', async (req, res) => {
     res.json({ 
       success: true, 
       message: 'Database cleaned successfully',
-      user: 'sukshamrainaa',
+      user: 'parvgupta',
       timestamp: timestamp,
       deleted: {
         transactions: deletedTransactions.deletedCount,
@@ -322,7 +322,7 @@ app.get('/api/health', (req, res) => {
   res.json({ 
     success: true, 
     message: 'Advanced Fraud Detection API',
-    user: 'sukshamrainaa',
+    user: 'parvgupta',
     version: '3.2.0',
     modelVersion: 'v3.2.0',
     alertThreshold: '0.4 (40%)',
